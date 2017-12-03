@@ -118,7 +118,6 @@ class HuffmanSuite extends FunSuite {
       createCodeTree("abc".toList), createCodeTree("cccccccccc".toList)))
     assert(list.map(x => weight(x)).sum === 19)
     // HINT: t2 is not optimal 
-    // 
   }
 
 
