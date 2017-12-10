@@ -1,6 +1,9 @@
-# coursera-progfun
+# Functional Programming Principles in Scala
 
-https://www.coursera.org/learn/progfun1
+*   [Functional Programming Principles in Scala | Coursera](https://www.coursera.org/learn/progfun1)
+*   [Functional Program Design in Scala | Coursera](https://www.coursera.org/learn/progfun2)
 
 
-Recommand: [The Neophyte's Guide to Scala - Daniel Westheide](http://danielwestheide.com/scala/neophytes.html)
+Recommand reading
+
+*   [The Neophyte's Guide to Scala - Daniel Westheide](http://danielwestheide.com/scala/neophytes.html)
