@@ -42,7 +42,6 @@ class BloxorzSuite extends FunSuite {
     val optsolution = List(Right, Right, Down, Right, Right, Right, Down)
   }
 
-
 	test("terrain function level 1") {
     new Level1 {
       assert(terrain(Pos(0,0)), "0,0")
@@ -99,6 +98,14 @@ class BloxorzSuite extends FunSuite {
 
         Set(Block(Pos(1,2),Pos(1,3)), Block(Pos(1,1),Pos(1,1)))
       ) == Set((Block(Pos(2,1),Pos(3,1)), List(Down,Left,Up))).toStream)
+    }
+  }
+
+  test("optimal solution for level 6::5") {
+    new Level1 {
+      val pos = findChar('-', Vector(Vector('-')))
+      assert(pos.row == 0)
+      assert(pos.col == 0)
     }
   }
 
