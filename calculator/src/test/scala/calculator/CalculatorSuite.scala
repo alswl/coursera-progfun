@@ -12,9 +12,9 @@ import TweetLength.MaxTweetLength
 @RunWith(classOf[JUnitRunner])
 class CalculatorSuite extends FunSuite with ShouldMatchers {
 
-  /******************
-   ** TWEET LENGTH **
-   ******************/
+  /** ****************
+    * * TWEET LENGTH **
+    * *****************/
 
   def tweetLength(text: String): Int =
     text.codePointCount(0, text.length)

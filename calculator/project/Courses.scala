@@ -11,41 +11,41 @@ object Courses {
   /** Configurations of the assignments of all courses */
   val all: Courses = Map(
     "progfun1" -> {
-        val styleSheetPath = "scalastyle" :: "scalastyle_config.xml" :: Nil
-        Map(
-          "example" -> Assignment(
-            packageName = "example",
-            courseraId = CourseraId("g4unnjZBEeWj7SIAC5PFxA", "d5jxI", "xIz9O", None),
-            maxScore = 10d,
-            styleCheck = Some(StyleCheck(0.2, styleSheetPath))),
-          "recfun" -> Assignment(
-            packageName = "recfun",
-            courseraId = CourseraId("SNYuDzZEEeWNVyIAC92BaQ", "PzVVY", "Yljln", Some("Ey6Jf")),
-            maxScore = 10d,
-            styleCheck = Some(StyleCheck(0.2, styleSheetPath))),
-          "funsets" -> Assignment(
-            packageName = "funsets",
-            courseraId = CourseraId("FNHHMDfsEeWAGiIAC46PTg", "IljBE", "WWsVR", Some("BVa6a")),
-            maxScore = 10d,
-            styleCheck = Some(StyleCheck(0.2, styleSheetPath))),
-          "objsets" -> Assignment(
-            packageName = "objsets",
-            courseraId = CourseraId("6PTXvD99EeWAiCIAC7Pj9w", "7hlkb", "d1FGp", Some("Ogg05")),
-            maxScore = 10d,
-            styleCheck = Some(StyleCheck(0.2, styleSheetPath)),
-            options = Map("grader-timeout" -> "1800")),
-          "patmat" -> Assignment(
-            packageName = "patmat",
-            courseraId = CourseraId("BwkTtD9_EeWFZSIACtiVgg", "2KYZc", "ZjaI7", Some("uctOq")),
-            maxScore = 10d,
-            styleCheck = Some(StyleCheck(0.2, styleSheetPath))),
-          "forcomp" -> Assignment(
-            packageName = "forcomp",
-            courseraId = CourseraId("CPJe397VEeWLGArWOseZkw", "v2XIe", "lzaCV", Some("nVRPb")),
-            maxScore = 10d,
-            styleCheck = Some(StyleCheck(0.2, styleSheetPath)),
-            options = Map("grader-timeout" -> "1800"))
-        )
+      val styleSheetPath = "scalastyle" :: "scalastyle_config.xml" :: Nil
+      Map(
+        "example" -> Assignment(
+          packageName = "example",
+          courseraId = CourseraId("g4unnjZBEeWj7SIAC5PFxA", "d5jxI", "xIz9O", None),
+          maxScore = 10d,
+          styleCheck = Some(StyleCheck(0.2, styleSheetPath))),
+        "recfun" -> Assignment(
+          packageName = "recfun",
+          courseraId = CourseraId("SNYuDzZEEeWNVyIAC92BaQ", "PzVVY", "Yljln", Some("Ey6Jf")),
+          maxScore = 10d,
+          styleCheck = Some(StyleCheck(0.2, styleSheetPath))),
+        "funsets" -> Assignment(
+          packageName = "funsets",
+          courseraId = CourseraId("FNHHMDfsEeWAGiIAC46PTg", "IljBE", "WWsVR", Some("BVa6a")),
+          maxScore = 10d,
+          styleCheck = Some(StyleCheck(0.2, styleSheetPath))),
+        "objsets" -> Assignment(
+          packageName = "objsets",
+          courseraId = CourseraId("6PTXvD99EeWAiCIAC7Pj9w", "7hlkb", "d1FGp", Some("Ogg05")),
+          maxScore = 10d,
+          styleCheck = Some(StyleCheck(0.2, styleSheetPath)),
+          options = Map("grader-timeout" -> "1800")),
+        "patmat" -> Assignment(
+          packageName = "patmat",
+          courseraId = CourseraId("BwkTtD9_EeWFZSIACtiVgg", "2KYZc", "ZjaI7", Some("uctOq")),
+          maxScore = 10d,
+          styleCheck = Some(StyleCheck(0.2, styleSheetPath))),
+        "forcomp" -> Assignment(
+          packageName = "forcomp",
+          courseraId = CourseraId("CPJe397VEeWLGArWOseZkw", "v2XIe", "lzaCV", Some("nVRPb")),
+          maxScore = 10d,
+          styleCheck = Some(StyleCheck(0.2, styleSheetPath)),
+          options = Map("grader-timeout" -> "1800"))
+      )
     },
 
     "parprog1" -> {
@@ -114,22 +114,22 @@ object Courses {
           packageName = "example",
           courseraId = CourseraId("9W3VuiJREeaFaw43_UrNUw", "vsJoj", "I6L8m", None),
           maxScore = 10d,
-          options = Map("Xmx"->"1540m", "grader-memory"->"2048")),
+          options = Map("Xmx" -> "1540m", "grader-memory" -> "2048")),
         "wikipedia" -> Assignment(
           packageName = "wikipedia",
           courseraId = CourseraId("EH8wby4kEeawURILfHIqjw", "5komc", "CfQX2", Some("QcWcs")),
           maxScore = 10d,
-          options = Map("Xmx"->"1540m", "grader-memory"->"2048", "totalTimeout" -> "900", "grader-cpu" -> "2")),
+          options = Map("Xmx" -> "1540m", "grader-memory" -> "2048", "totalTimeout" -> "900", "grader-cpu" -> "2")),
         "stackoverflow" -> Assignment(
           packageName = "stackoverflow",
           courseraId = CourseraId("7ByAoS4kEea1yxIfJA1CUw", "OY5fJ", "QhzMw", Some("FWGnz")),
           maxScore = 10d,
-          options = Map("Xmx"->"1540m", "grader-memory"->"2048", "totalTimeout" -> "900", "grader-cpu" -> "2")),
+          options = Map("Xmx" -> "1540m", "grader-memory" -> "2048", "totalTimeout" -> "900", "grader-cpu" -> "2")),
         "timeusage" -> Assignment(
           packageName = "timeusage",
           courseraId = CourseraId("mVk0fgQ0EeeGZQrYVAT1jg", "y8PO8", "O0akp", Some("T19Ec")),
           maxScore = 10d,
-          options = Map("Xmx"->"1540m", "grader-memory"->"2048", "totalTimeout" -> "900", "grader-cpu" -> "2")
+          options = Map("Xmx" -> "1540m", "grader-memory" -> "2048", "totalTimeout" -> "900", "grader-cpu" -> "2")
         )
       )
     },
@@ -140,7 +140,7 @@ object Courses {
         courseraId = CourseraId("XdlPsYjPEeeJEQ6TH2unjA", "RIjrU", "ekWDs", Some("NXfKi")),
         maxScore = 10d,
         styleCheck = Some(StyleCheck(0.1, "scalastyle" :: "observatory.xml" :: Nil)),
-        options = Map("Xmx"->"1600m", "grader-memory"->"2048", "grader-cpu" -> "2")
+        options = Map("Xmx" -> "1600m", "grader-memory" -> "2048", "grader-cpu" -> "2")
       )
     )
   )
@@ -148,29 +148,29 @@ object Courses {
 }
 
 /**
-  * @param packageName     Used as the prefix for: (1) handout name, (2) the Scala package, (3) source folder.
-  * @param courseraId      Identifies the items and parts of the premium and non-premium assignments.
-  * @param maxScore        Maximum score that can be given for the assignment. Must match the value in the WebAPI.
-  * @param styleCheck      Configuration of the style checking for the assignment
-  * @param options         Options passed to the java process or coursera infrastructure. Following values are
-  *                        supported:
+  * @param packageName Used as the prefix for: (1) handout name, (2) the Scala package, (3) source folder.
+  * @param courseraId  Identifies the items and parts of the premium and non-premium assignments.
+  * @param maxScore    Maximum score that can be given for the assignment. Must match the value in the WebAPI.
+  * @param styleCheck  Configuration of the style checking for the assignment
+  * @param options     Options passed to the java process or coursera infrastructure. Following values are
+  *                    supported:
   *
-  *                            NAME                               DEFAULT              DESCRIPTION
-  *                            Xms                                10m                  -Xms for jvm
-  *                            Xmx                                256m                 -Xmx for jvm, should less than `grader-memory`
-  *                            individualTimeout                  240                  time out of one test case
-  *                            totalTimeout                       850                  total time out, should less than `grader-timeout`
-  *                            grader-cpu                         1                    number of cpu for coursera infrastructure
-  *                            grader-memory                      1024                 memory for coursera infrastructure
-  *                            grader-timeout                     1200                 grading timeout for coursera infrastructure
+  *                    NAME                               DEFAULT              DESCRIPTION
+  *                    Xms                                10m                  -Xms for jvm
+  *                    Xmx                                256m                 -Xmx for jvm, should less than `grader-memory`
+  *                    individualTimeout                  240                  time out of one test case
+  *                    totalTimeout                       850                  total time out, should less than `grader-timeout`
+  *                    grader-cpu                         1                    number of cpu for coursera infrastructure
+  *                    grader-memory                      1024                 memory for coursera infrastructure
+  *                    grader-timeout                     1200                 grading timeout for coursera infrastructure
   */
 case class Assignment(
-  packageName: String,
-  courseraId: CourseraId,
-  maxScore: Double,
-  styleCheck: Option[StyleCheck] = Option.empty,
-  options: Map[String, String] = Map.empty
-)
+                       packageName: String,
+                       courseraId: CourseraId,
+                       maxScore: Double,
+                       styleCheck: Option[StyleCheck] = Option.empty,
+                       options: Map[String, String] = Map.empty
+                     )
 
 /**
   *
@@ -179,17 +179,17 @@ case class Assignment(
   * @param styleSheet Path to the scalastyle configuration file (relative from the assignment base directory)
   */
 case class StyleCheck(
-  scoreRatio: Double,
-  styleSheet: List[String]
-)
+                       scoreRatio: Double,
+                       styleSheet: List[String]
+                     )
 
 /**
   * Coursera uses two versions of each assignment. They both have the same assignment key and part id but have
   * different item ids.
   *
-  * @param key Assignment key
-  * @param partId Assignment partId
-  * @param itemId Item id of the non premium version
+  * @param key           Assignment key
+  * @param partId        Assignment partId
+  * @param itemId        Item id of the non premium version
   * @param premiumItemId Item id of the premium version (`None` if the assignment is optional)
   */
 case class CourseraId(key: String, partId: String, itemId: String, premiumItemId: Option[String])

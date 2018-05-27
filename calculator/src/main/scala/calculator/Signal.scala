@@ -3,7 +3,9 @@ package calculator
 import scala.util.DynamicVariable
 
 class Signal[T](expr: => T) {
+
   import Signal._
+
   private var myExpr: () => T = _
   private var myValue: T = _
   private var observers: Set[Signal[_]] = Set()
@@ -19,10 +21,10 @@ class Signal[T](expr: => T) {
      * want to be able to track the actual dependency graph in the tests.
      */
     //if (myValue != newValue) {
-      myValue = newValue
-      val obs = observers
-      observers = Set()
-      obs.foreach(_.computeValue())
+    myValue = newValue
+    val obs = observers
+    observers = Set()
+    obs.foreach(_.computeValue())
     //}
   }
 
@@ -53,5 +55,6 @@ object NoSignal extends Signal[Nothing](???) {
 
 object Signal {
   val caller = new DynamicVariable[Signal[_]](NoSignal)
+
   def apply[T](expr: => T) = new Signal(expr)
 }

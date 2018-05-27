@@ -11,14 +11,15 @@ import scalaj.http._
 import scala.util.{Try, Success, Failure}
 
 case class AssignmentInfo(
-  key: String,
-  itemId: String,
-  premiumItemId: Option[String],
-  partId: String,
-  styleSheet: Option[File => File]
-)
+                           key: String,
+                           itemId: String,
+                           premiumItemId: Option[String],
+                           partId: String,
+                           styleSheet: Option[File => File]
+                         )
 
-case class MapMapString (map: Map[String, Map[String, String]])
+case class MapMapString(map: Map[String, Map[String, String]])
+
 /**
   * Note: keep this class concrete (i.e., do not convert it to abstract class or trait).
   */
@@ -125,8 +126,8 @@ class StudentBuildLike protected() extends CommonBuild {
     val courseName =
       course.value match {
         case "capstone" => "scala-capstone"
-        case "bigdata"  => "scala-spark-big-data"
-        case other      => other
+        case "bigdata" => "scala-spark-big-data"
+        case other => other
       }
 
     val partId = assignmentDetails.partId
@@ -145,12 +146,12 @@ class StudentBuildLike protected() extends CommonBuild {
               |It can be obtained from the assignment page:
               |https://www.coursera.org/learn/$courseName/programming/$itemId
               |${
-                premiumItemId.fold("") { id =>
-                  s"""or (for premium learners):
-                     |https://www.coursera.org/learn/$courseName/programming/$id
+            premiumItemId.fold("") { id =>
+              s"""or (for premium learners):
+                 |https://www.coursera.org/learn/$courseName/programming/$id
                    """.stripMargin
-                }
-              }
+            }
+          }
           """.stripMargin
         s.log.error(inputErr)
         failSubmit()
@@ -177,9 +178,9 @@ class StudentBuildLike protected() extends CommonBuild {
       )
       s.log.info("Connecting to Coursera...")
       val response = Try(http.postData(data)
-                         .headers(hs)
-                         .option(HttpOptions.connTimeout(10000)) // scalaj default timeout is only 100ms, changing that to 10s
-                         .asString) // kick off HTTP POST
+        .headers(hs)
+        .option(HttpOptions.connTimeout(10000)) // scalaj default timeout is only 100ms, changing that to 10s
+        .asString) // kick off HTTP POST
       response
     }
 
@@ -298,7 +299,7 @@ class StudentBuildLike protected() extends CommonBuild {
     val styleSheet = info.styleSheet
     val logger = streams.value.log
     styleSheet match {
-      case None     => logger.warn("Can't check style: there is no style sheet provided.")
+      case None => logger.warn("Can't check style: there is no style sheet provided.")
       case Some(ss) =>
         val (feedback, score) = StyleChecker.assess(sourceFiles, ss(baseDirectory.value).getPath)
         logger.info(
