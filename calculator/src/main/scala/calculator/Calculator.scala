@@ -23,7 +23,7 @@ object Calculator {
   def eval(expr: Expr, references: Map[String, Signal[Expr]]): Double = {
     expr match {
       case Literal(v) => v
-      case Ref(name) => eval(references(name)(), references - name)
+      case Ref(name) => eval(getReferenceExpr(name, references), references - name)
       case Plus(a, b) => eval(a, references) + eval(b, references)
       case Minus(a, b) => eval(a, references) - eval(b, references)
       case Times(a, b) => eval(a, references) * eval(b, references)
@@ -36,7 +36,7 @@ object Calculator {
     * If the variable is not known, returns a literal NaN.
     */
   private def getReferenceExpr(name: String,
-                               references: Map[String, Signal[Expr]]) = {
+                               references: Map[String, Signal[Expr]]): Expr = {
     references.get(name).fold[Expr] {
       Literal(Double.NaN)
     } { exprSignal =>
