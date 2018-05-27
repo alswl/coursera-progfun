@@ -33,7 +33,7 @@ trait BinomialHeap extends Heap {
 
   case class Node(x: A, r: Rank, c: List[Node])
 
-  override type H = List[Node]
+  override type H = List[Node]  // magic here
 
   protected def root(t: Node) = t.x
 
